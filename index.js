@@ -5,11 +5,16 @@ const UserRouter = require("./routes/UserRoutes");
 const AdminRouter = require("./routes/AdminRoutes");
 const errorHandler = require("./middleware/errorHandler");
 const cookieParser = require("cookie-parser");
+const cors = require("cors");
 //init
 const app = express();
 require("dotenv").config();
 DBConnect();
 //middleware
+app.use(cors({
+  origin: true,
+   credentials: true
+}));
 app.use(express.json());
 app.use(cookieParser());
 
