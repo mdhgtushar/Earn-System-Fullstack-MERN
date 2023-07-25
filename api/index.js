@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 //routes
-app.get("/", (req, res) => res.send("App is running ..."));
+app.get("/", (req, res) => res.send("<div style='font-family:arial;display:flex;height:100vh;align-items:center;justify-content:center'><div style='text-align:center'><h2>Earn System Api</h2><small>Developed by, HOBAYER GOLONDAZ</small></div></div>"));
 app.use("/api/user", UserRouter);
 app.use("/api/admin", AdminRouter);
 
